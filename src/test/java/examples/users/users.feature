@@ -19,9 +19,9 @@ Feature: sample karate test script
     * def user =
       """
       {
-        "name": "Test User",
-        "username": "testuser",
-        "email": "test@user.com",
+        "name": "Ana Test User",
+        "username": "anatestuser",
+        "email": "anatest@user.com",
         "address": {
           "street": "Has No Name",
           "suite": "Apt. 123",
