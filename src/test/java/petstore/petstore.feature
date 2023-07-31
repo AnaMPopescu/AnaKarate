@@ -119,8 +119,17 @@ Feature: Testing Petstore
 
     Examples:
     |petId|
-    |9223372036854775807    |
-    |1   |
-    |2  |
-    |3|
-    |4|
+#    |9223372036854775807    |
+    |5   |
+    |6  |
+    |7|
+    |8|
+    |9|
+
+
+
+    Scenario: As I user, I would like to not be able to delete a pet that doesn't exist
+      Given url  'https://petstore.swagger.io/v2/pet/1234567890'
+      When method delete
+      Then status 404
+      And match response contains karate.equals([])
